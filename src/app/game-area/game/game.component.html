@@ -27,6 +27,8 @@
     <main>
         <h5> Score : {{score}} </h5>
         <h5> Misses : {{misses}} </h5>
+        <h5> life : {{noOfXp}} </h5>
+
         <div class="gameTile">
             <app-tiles [cardData]=' Tiles[0] ' (sendEventToCardHolder) = 'cardClicked($event)'></app-tiles>
             <app-tiles [cardData]=' Tiles[1] ' (sendEventToCardHolder) = 'cardClicked($event)'></app-tiles>

@@ -1,24 +1,31 @@
 
-<div style="text-align: center;">
-    <section>
-        <label for="playerName"> Enter Your Name: </label>
+<div class="mainpage" style="text-align: center;">
+    <section class="playerDetails">
+        <label for="playerName"> Enter Your Name : </label>
         <input type="text" name="playerName" id="playerName">
     </section>
+    <br>
     <section>
-        <label id="selectMode"> Select Your Game Mode </label>
+        <label id="selectMode"> Select Your Game Type  </label>
         <mat-radio-group aria-labelledby="selectMode">
-            <mat-radio-button> Arcade </mat-radio-button>
-            <mat-radio-button> Battle Ground </mat-radio-button>
+            <ul class="horizontal">
+                <li><mat-radio-button> Arcade </mat-radio-button></li>
+                <li> <mat-radio-button> Battle Ground </mat-radio-button></li>
+            </ul>
         </mat-radio-group>
     </section>
+    <br>
     <section>
-        <label id="selectLevel"> Select Your Game Mode </label>
+        <label id="selectLevel"> Select Your Game Level </label>
         <mat-radio-group aria-labelledby="selectLevel">
-            <mat-radio-button> Level 1 </mat-radio-button>
-            <mat-radio-button> Level 2 </mat-radio-button>
-            <mat-radio-button> Level 3 </mat-radio-button>
+            <ul class="horizontal">
+                <li><mat-radio-button> Level 1 </mat-radio-button></li>
+                <li><mat-radio-button> Level 2 </mat-radio-button></li>
+                <li><mat-radio-button> Level 3 </mat-radio-button></li>
+            </ul>
         </mat-radio-group>
     </section>
+    <br>
     <section>
         <button type="submit" (click)="goToPlay()"> Start </button>
     </section>

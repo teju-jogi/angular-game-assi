@@ -1,0 +1,16 @@
+.mainpage {
+    background-color: lightgray;
+    font-family: 'DM Serif Text', serif;
+
+}
+
+.playerDetails {
+    color:green;
+}
+.horizontal {
+    list-style: none;
+    
+}
+li {
+    display: inline;
+}
