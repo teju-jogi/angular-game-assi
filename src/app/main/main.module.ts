@@ -12,6 +12,7 @@ import { TypeALevel3Component } from './type-a-level3/type-a-level3.component';
 import { TypeBLevel1Component } from './type-b-level1/type-b-level1.component';
 import { TypeBLevel2Component } from './type-b-level2/type-b-level2.component';
 import { TypeBLevel3Component } from './type-b-level3/type-b-level3.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -29,6 +30,7 @@ import { TypeBLevel3Component } from './type-b-level3/type-b-level3.component';
   imports: [
     CommonModule,
     BrowserAnimationsModule,
+    FormsModule,
     MatRadioModule,
     MatListModule
   ],

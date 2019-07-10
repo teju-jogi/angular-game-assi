@@ -7,7 +7,7 @@ import { PlayerScoreComponent } from './player-score/player-score.component';
 import { TimerComponent } from './timer/timer.component';
 import { LifeComponent } from './life/life.component';
 import { MatGridListModule } from '@angular/material';
-
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,6 +21,7 @@ import { MatGridListModule } from '@angular/material';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     MatGridListModule
   ],
   exports: [

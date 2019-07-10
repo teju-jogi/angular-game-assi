@@ -1,5 +1,3 @@
-
-
 <!-- <div style="text-align: center; display: flex; flex-flow: row wrap;">
     <app-play-tile></app-play-tile>
     <app-play-tile></app-play-tile>
@@ -19,34 +17,38 @@
     <app-life></app-life>
 </aside> -->
 
-<div class="gamePage">
-    <div>
-        <app-player-score></app-player-score>
-    </div>
+<div class="container">
 
-    <main>
-        <h5> Score : {{score}} </h5>
-        <h5> Misses : {{misses}} </h5>
-        <h5> life : {{noOfLife}} </h5>
-
-        <div class="gameTile">
-            <app-tiles [cardData]=' Tiles[0] ' (sendEventToCardHolder) = 'cardClicked($event)'></app-tiles>
-            <app-tiles [cardData]=' Tiles[1] ' (sendEventToCardHolder) = 'cardClicked($event)'></app-tiles>
-            <!-- <p> {{tiles[0]}} {{tiles[1]}} </p> -->
+    <div class="row" >
+        <div class="col-3">
+            <app-player-score></app-player-score>
         </div>
-        
-        <div class="gameTile">
-            <app-tiles [cardData]=' Tiles[2] ' (sendEventToCardHolder) = 'cardClicked($event)'></app-tiles>
-            <app-tiles [cardData]=' Tiles[3] ' (sendEventToCardHolder) = 'cardClicked($event)'></app-tiles>
-            <!-- <p> {{tiles[2]}} {{tiles[3]}} </p> -->
-        </div>
-        <!-- <div class="gameTile" *ngFor="let tile of tiles; let i = index">
-            <app-tile></app-tile> {{i + 1}}
-        </div> -->
-    </main>
 
-    <div>
-        <app-timer></app-timer>
-        <app-life></app-life>
+        <main id="col-6">
+            <h5> Score : {{score}} </h5>
+            <h5> Misses : {{misses}} </h5>
+            <h5> life : {{noOfLife}} </h5>
+
+            <div class="row" id="card">
+                <div class="col-6 pt-3" *ngFor="let tile of Tiles; let i = index">
+                    <app-tiles [cardData]='Tiles[i]' (sendEventToCardHolder)='cardClicked($event)'></app-tiles>
+                </div>
+            </div>
+            <!-- <div class="gameTile">
+                <app-play-tile [cardData]=' playTiles[0] ' (sendEventToCardHolder) = 'cardClicked($event)'></app-play-tile>
+                <app-play-tile [cardData]=' playTiles[1] ' (sendEventToCardHolder) = 'cardClicked($event)'></app-play-tile>
+            </div>
+            
+            <div class="gameTile">
+                <app-play-tile [cardData]=' playTiles[2] ' (sendEventToCardHolder) = 'cardClicked($event)'></app-play-tile>
+                <app-play-tile [cardData]=' playTiles[3] ' (sendEventToCardHolder) = 'cardClicked($event)'></app-play-tile>
+            </div> -->
+            <!-- <div class="gameTile" *ngFor="let tile of tiles; let i = index">
+                <app-play-tile></app-play-tile> {{i + 1}}
+            </div> -->
+        </main>
+        <div class="col-3">
+
+        </div>
     </div>
 </div>

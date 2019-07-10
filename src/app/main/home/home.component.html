@@ -1,11 +1,11 @@
 
 <div class="mainpage" style="text-align: center;">
     <section class="playerDetails">
-        <label for="playerName"> Enter Your Name : </label>
-        <input type="text" name="playerName" id="playerName">
+        <label for="player"> Enter Your Name : </label>
+        <input type="text" name="player" [(ngModel)]="playerName">
     </section>
     <br>
-    <section>
+    <!-- <section>
         <label id="selectMode"> Select Your Game Type  </label>
         <mat-radio-group aria-labelledby="selectMode">
             <ul class="horizontal">
@@ -25,7 +25,7 @@
             </ul>
         </mat-radio-group>
     </section>
-    <br>
+    <br> -->
     <section>
         <button type="submit" (click)="goToPlay()"> Start </button>
     </section>

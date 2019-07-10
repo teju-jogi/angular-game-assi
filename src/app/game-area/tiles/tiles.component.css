@@ -8,3 +8,7 @@ div{
 .card-active{
     background-color:lightcoral;
 }
+.playTile{
+    width: 100%;
+    border: 1px solid #000000;
+}
