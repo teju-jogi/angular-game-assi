@@ -20,7 +20,7 @@ export class GameComponent implements OnInit {
   gameTimer: any;
   public gameTimeLimit =  12000;
   public isGameOver: boolean;
-  public noOfXp: number;
+  public noOfLife: number;
   constructor( private router: Router) { }
 
   ngOnInit() {
@@ -28,7 +28,7 @@ export class GameComponent implements OnInit {
     this.hardness = 4;
     this.score = 0;
     this.misses = 0;
-    this.noOfXp = 3;
+    this.noOfLife = 3;
     this.isGameOver = false;
     this.generateTiles();
     if (this.gameType === 1) {
@@ -63,8 +63,8 @@ export class GameComponent implements OnInit {
         }, this.cardClickTimeInterval);
       } else {
         this.misses++;
-        this.noOfXp--;
-        if (this.misses === 3 || this.noOfXp === 0) {
+        this.noOfLife--;
+        if (this.misses === 3 || this.noOfLife === 0) {
           this.isGameOver = true;
           this.endGame();
         }
